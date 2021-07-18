@@ -1,0 +1,95 @@
+.Main {
+    display: flex;
+    justify-content: center;
+    margin-left: 16.67%;
+    margin-right: 16.67%;
+    margin-top: 10%;
+}
+
+
+img{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 20%;
+}
+
+.Sedan{
+    background-color : hsl(31, 77%, 52%);
+    border: 1px solid;
+    border-radius: 10px 0 0 10px;
+}
+
+.SUV{
+    background-color: hsl(184, 100%, 22%);
+}
+
+.Luxury{
+    background-color: hsl(179, 100%, 13%);
+    border: 1px solid;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.Sedan-head, .SUV-head, .Luxury-head {
+    font-size: 3rem;
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    padding: 0 20%;
+}
+
+.Sedan-body, .SUV-body, .Luxury-body {
+    height: 100px;
+    width: auto;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 10% 20%;
+    line-height: 1.5;
+}
+
+.myButton {
+	background-color:white;
+	border-radius:28px;
+	border:1px solid ;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:20px;
+    margin: 50px 0 20px 40px;
+	padding: 8px 20px;
+}
+
+
+
+.Luxury .myButton{
+    color: hsl(179, 100%, 13%);
+}
+.SUV .myButton{
+    color: hsl(184, 100%, 22%);
+}
+.Sedan .myButton{
+    color: hsl(31, 77%, 52%);
+}
+
+.myButton:hover {
+	background-color:rgb(199, 184, 184);
+}
+
+
+
+.attribution {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.attribution a {
+    color: hsl(14, 92%, 51%);
+}
+
+
+@media (max-width : 600px) {
+    .Main{
+        display: block;
+    }
+}
