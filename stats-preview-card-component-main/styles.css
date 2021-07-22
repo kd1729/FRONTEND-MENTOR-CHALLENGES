@@ -81,6 +81,7 @@ body {
     .text {
         border: 1px;
         border-radius: 0 0 3% 3%;
+        text-align: center;
     }
 
     .canvas {
@@ -108,7 +109,9 @@ body {
     .bold {
         font-size: 1.3rem;
     }
-
+    .attribution {
+        margin-top: 2rem;
+    }
 }
 
 
