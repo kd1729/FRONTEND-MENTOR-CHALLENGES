@@ -14,6 +14,7 @@ html{
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: auto;
@@ -82,10 +83,12 @@ img {
 }
 
 .attribution {
-  font-size: 11px;
+  padding-top: 2.5rem;
+  font-size: 30px;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  font-weight: 700;
+  color: hsl(228, 88%, 49%);
 }
