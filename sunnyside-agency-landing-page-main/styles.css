@@ -6,7 +6,7 @@
 /* 
 font-family: 'Barlow', sans-serif;
 font-family: 'Fraunces', serif; */
-body{
+body {
   background-color: azure;
 }
 
@@ -24,24 +24,23 @@ ul {
   overflow: hidden;
 }
 
-
-
- li{
+li {
   float: right;
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
-ul .name{
-  float: left;
+.name {
+  margin-top: 20px;
+  margin-left: 10px;
   font-size: 24px;
   color: white;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: hsla(0, 0%, 100%, 0.774);
 }
@@ -50,28 +49,44 @@ li a:hover {
   background-color: #fff;
   color: #000;
 }
-
+.toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+.bar {
+  width: 100%;
+  background: #fff;
+  height: 3px;
+}
 .myButton {
-	background-color: white;
-	border-radius:28px;
-	border:1px solid #fcfcfc;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family:Arial;
-	font-size:12px;
-	font-weight:bold;
-	padding:14px 16px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px ;
+  background-color: white;
+  border-radius: 28px;
+  border: 1px solid #fcfcfc;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px;
 }
 .myButton:hover {
-	background-color:black;
+  background-color: black;
   color: #fff;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .one {
@@ -113,8 +128,6 @@ li a:hover {
   background-image: url("./images/desktop/image-photography.jpg");
 }
 
-
-
 .heading-one {
   font-size: 2vw;
   margin-top: 8%;
@@ -148,15 +161,15 @@ li a:hover {
   color: hsl(210, 4%, 67%);
 }
 
-.learn-more{
+.learn-more {
   color: #000;
-  font-weight:900;
+  font-weight: 900;
   font-size: larger;
   margin: 5%;
   text-decoration: underline solid yellow 5px;
-} 
+}
 
-.learn-more a:hover{
+.learn-more a:hover {
   color: rgb(31, 197, 120);
 }
 
@@ -193,49 +206,50 @@ li a:hover {
   letter-spacing: 1px;
 }
 
-.three-testimonials{
-    margin-bottom: 10%;
-    display: flex;
-    align-items: center;
+.three-testimonials {
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
 }
 
-.client-img{
-    text-align: center;
-  }
+.client-img {
+  text-align: center;
+}
 
 .testimonials img {
-    border: 5px solid #fff;
-    border-radius: 50%;
-    height: 100px;
-  }
-
-.client-1, .client-2, .client-3{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 2%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  height: 100px;
 }
 
-.client-review{
-    color: #aaa;
-    font-size: 14px;
-    line-height: 24px;
-    font-family: 'Barlow', sans-serif;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    
+.client-1,
+.client-2,
+.client-3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 2%;
 }
 
-.client-name{
-    font-family: "Fraunces", serif;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.client-review {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Barlow", sans-serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.client-position{
-    color: #aaa;
-    font-family: 'Barlow', sans-serif;
-    font-size: 10px;
+.client-name {
+  font-family: "Fraunces", serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.client-position {
+  color: #aaa;
+  font-family: "Barlow", sans-serif;
+  font-size: 10px;
 }
 
 .testimonials {
@@ -245,9 +259,6 @@ li a:hover {
   flex-direction: column;
   align-items: center;
 }
-
-
-
 
 .footer-img1,
 .footer-img2,
@@ -272,38 +283,36 @@ li a:hover {
   background-image: url("./images/desktop/image-gallery-sugarcubes.jpg");
 }
 
-.footer{
-  background-color: hsl(168, 35%, 58%); 
+.footer {
+  background-color: hsl(168, 35%, 58%);
   grid-column: span 4;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer .name{
+.footer .name {
   font-weight: 700;
   color: hsl(167, 40%, 24%);
   margin: 5% 0;
   font-size: 24px;
 }
 
-.footer-links a{
-    color: hsl(167, 40%, 24%);
+.footer-links a {
+  color: hsl(167, 40%, 24%);
 }
 
-.contact-me{
+.contact-me {
   display: flex;
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.contact-me img{
+.contact-me img {
   margin: 0 15px;
 }
 
-
-
 .attribution {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 16px;
   text-align: center;
   margin-top: 5%;
@@ -314,50 +323,66 @@ li a:hover {
   color: hsl(228, 45%, 44%);
 }
 
-@media (max-width : 600px){
-
-  .Main{
+@media (max-width: 600px) {
+  .Main {
     grid-template-columns: 23% 23% 23% 23%;
   }
 
-.two,
-.three,
-.four,
-.five,
-.six,
-.seven{
-  grid-column: span 4;
-}
+  li {
+    float: none;
+    text-align: right;
+  }
 
-.footer-img1,
-.footer-img2,
-.footer-img3,
-.footer-img4{
-  grid-column: span 2;
-}
+  .toggle{
+    visibility: visible;
+  }
 
-  .heading-one{
-    margin-top: 20px;
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven {
+    grid-column: span 4;
+  }
+
+  .footer-img1,
+  .footer-img2,
+  .footer-img3,
+  .footer-img4 {
+    grid-column: span 2;
+  }
+
+  .heading-one {
+    position: absolute;
+    top: 80px;
+    font-size: 30px;
+  }
+
+  .heading-two,
+  .heading-five,
+  .heading-six,
+  .heading-six,
+  .heading-seven {
     font-size: 20px;
   }
 
-  .heading-two, .heading-five, .heading-six, .heading-six, .heading-seven{
-    font-size: 20px;
-  }
-
-  .text-two, .text-five, .text-six, .text-seven{
+  .text-two,
+  .text-five,
+  .text-six,
+  .text-seven {
     margin-bottom: 10%;
   }
 
-  .down-arrow{
+  .down-arrow {
     top: 22%;
-    left: 47%
+    left: 47%;
   }
 
-  .three-testimonials{
+  .three-testimonials {
     flex-direction: column;
   }
-  .footer .name{
+  .footer .name {
     margin: 0;
   }
-} 
+}
