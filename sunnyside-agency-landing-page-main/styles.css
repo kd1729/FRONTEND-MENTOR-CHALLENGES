@@ -51,6 +51,29 @@ li a:hover {
   color: #000;
 }
 
+.myButton {
+	background-color: white;
+	border-radius:28px;
+	border:1px solid #fcfcfc;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:14px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px ;
+}
+.myButton:hover {
+	background-color:black;
+  color: #fff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
 .one {
   grid-column: span 4;
   grid-row: span 20;
@@ -123,6 +146,18 @@ li a:hover {
   text-align: left;
   font-family: "Barlow", sans-serif;
   color: hsl(210, 4%, 67%);
+}
+
+.learn-more{
+  color: #000;
+  font-weight:900;
+  font-size: larger;
+  margin: 5%;
+  text-decoration: underline solid yellow 5px;
+} 
+
+.learn-more a:hover{
+  color: rgb(31, 197, 120);
 }
 
 .heading-six,
@@ -279,4 +314,50 @@ li a:hover {
   color: hsl(228, 45%, 44%);
 }
 
-@media (max)
+@media (max-width : 600px){
+
+  .Main{
+    grid-template-columns: 23% 23% 23% 23%;
+  }
+
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven{
+  grid-column: span 4;
+}
+
+.footer-img1,
+.footer-img2,
+.footer-img3,
+.footer-img4{
+  grid-column: span 2;
+}
+
+  .heading-one{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .heading-two, .heading-five, .heading-six, .heading-six, .heading-seven{
+    font-size: 20px;
+  }
+
+  .text-two, .text-five, .text-six, .text-seven{
+    margin-bottom: 10%;
+  }
+
+  .down-arrow{
+    top: 22%;
+    left: 47%
+  }
+
+  .three-testimonials{
+    flex-direction: column;
+  }
+  .footer .name{
+    margin: 0;
+  }
+} 
