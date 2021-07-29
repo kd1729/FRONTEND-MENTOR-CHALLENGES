@@ -54,6 +54,7 @@ body {
     width: 100px;
     font-size: 20px;
     background-color: hsl(189, 41%, 97%);
+    text-align: center;
 }
 
 input[type="number"]::placeholder {
