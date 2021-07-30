@@ -33,12 +33,12 @@
       <div class="select-tip">
         <div class="select-tip-heading">Select Tip %</div>
         <div class="tip-buttons">
-          <div class="myButton" onclick="calcuateAmount()" data-value="5">5%</div>
-          <div class="myButton" onclick="calcuateAmount()" data-value="10">10%</div>
-          <div class="myButton" onclick="calcuateAmount()" data-value="15">15%</div>
-          <div class="myButton" onclick="calcuateAmount()" data-value="25">25%</div>
-          <div class="myButton" onclick="calcuateAmount()" data-value="50">50%</div>
-          <input class="input-custom" type="number" placeholder="Custom">
+          <div class="myButton" onclick="calcuateAmount(5)">5%</div>
+          <div class="myButton" onclick="calcuateAmount(10)">10%</div>
+          <div class="myButton" onclick="calcuateAmount(15)">15%</div>
+          <div class="myButton" onclick="calcuateAmount(25)">25%</div>
+          <div class="myButton" onclick="calcuateAmount(50)">50%</div>
+          <input class="input-custom" type="number" placeholder="Custom" onkeyup="inputKeyUp(event)">
         </div>
       </div>
 
@@ -67,15 +67,16 @@
         </div>
         <div class="person-value">$0.00</div>
       </div>
-      <button class="reset-btn">
+      <button class="reset-btn" onclick="resetValues()">
         Reset
       </button>
     </div>
 
   </div>
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>. -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <br>
+    Coded by <a href="https://github.com/onlykingKD">@onlykingKD</a>.
   </div>
 </body>
 
