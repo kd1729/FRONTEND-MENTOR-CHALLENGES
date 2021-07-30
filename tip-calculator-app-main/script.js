@@ -5,11 +5,16 @@ function calcuateAmount(tipValue){
     let totalPersons = document.getElementsByClassName("input-people")[0].value;
 
     if(totalBill <= 0){
-        alert("Bill amount should be greater than 0");
+        alert("Bill amount should be greater than 0 !!");
         return;
     }
     if(totalPersons <= 0){
-        alert("There should be at least one person");
+        alert("There should be at least one person !!");
+        return;
+    }
+
+    if(tipValue < 0){
+        alert("Tip perccentage can not be negative !!");
         return;
     }
 

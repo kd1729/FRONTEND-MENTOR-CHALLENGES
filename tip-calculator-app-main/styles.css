@@ -6,6 +6,16 @@ body {
   place-items: center;
 }
 
+.app-name{
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 2rem;
+  letter-spacing: 8px;
+  color: hsl(183, 100%, 15%);
+}
+
 .Main {
   display: flex;
   background-color: white;
@@ -170,8 +180,9 @@ input[type="number"]::placeholder {
 
 .attribution {
   position: absolute;
-  margin-top: 52rem;
-  margin-left: 45rem;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1.5rem;
 }
 .attribution a {
@@ -179,53 +190,80 @@ input[type="number"]::placeholder {
 }
 
 @media (max-width: 500px) {
-  body {
-    display: unset;
-  }
 
   .Main {
-    margin-top: 5%;
-    margin-left: 10%;
+    margin-top: 1%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 350px;
     height: auto;
+  }
+
+  .app-name{
+    top: 5%;
+    font-size: 1rem;
+    font-weight: 900;
   }
 
   .Main-left {
     margin-bottom: 20px;
+    margin-left: -30px;
+    width: auto;
   }
 
   .Main-right {
-    width: 360px;
+    margin-top: 0;
+    width: 320px;
+    height: auto;
     margin-bottom: 20px;
   }
 
+  .input-bill,
+  .input-people {
+    height: 30px;
+    width: 90%;
+    margin-left:0px ;
+    font-size: 1.3rem;
+  }
+  .select-tip{
+    margin-top: 10px;
+  }
   .tip-buttons {
     grid-template-columns: auto auto;
+    row-gap: 10px;
+    column-gap: 15px;
   }
   .myButton {
-    padding: 10px 15px;
-    width: 120px;
+    padding: 5px 5px;
+    width: 100px;
   }
 
   .input-custom {
-    width: 140px;
+    width: 105px;
     text-align: center;
+  }
+
+  .tip-amount, .person{
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 25px;
   }
   .tip-amount-value,
   .person-value {
-    margin-left: 20%;
-    font-size: 2.4em;
+    font-size: 1.8rem;
+  }
+
+  .number-of-people{
+    margin-top: 10px;
   }
   .reset-btn {
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .attribution {
-    position: absolute;
-    margin: 20px 0 10px 100px;
-    font-size: 1.2rem;
+    top: 120%;
+    font-size: 1.3rem;
   }
 }
