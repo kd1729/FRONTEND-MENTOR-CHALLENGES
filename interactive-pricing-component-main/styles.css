@@ -1,0 +1,138 @@
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    /* background-color: rgb(128, 216, 216); */
+}
+.circles{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Main{
+    height: 100%;
+    width: 100%;
+    background-color: hsl(230, 29%, 92%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/bg-pattern.svg");
+    background-size: 100% auto;
+}
+
+.heading-1{
+    font-size: 2rem;
+    margin-top: 7%;
+}
+
+.heading-2{
+    color: grey;
+    margin-top: 10px;
+}
+
+.Inner-Main{
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.pageview-and-price{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#one, #two{
+    font-size: 2rem;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    
+    margin: 10% auto;
+  }
+  
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 600px; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    border-radius: 10px;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: url("./images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-color: rgb(12, 182, 125)    ;
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .billing{
+      display: flex;
+      justify-content: center
+  }
+  .discount{
+    background-color: red;
+    margin-left: 20px;
+}
+
+.footer{
+    display: flex;
+    border-top: 1px solid grey;
+}
+
+.benifits{
+    margin: 5%;
+}
+
+.btn{
+    align-self: center;
+    margin-left: 150px;
+}
+
+.myButton {
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:8px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
