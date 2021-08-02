@@ -9,3 +9,4 @@ https://www.frontendmentor.io/challenges
 <p> <h4> Challenge 3 : </h4> https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ </p>
 <p> <h4> Challenge 4 : </h4> https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef </p>
 <p> <h4> Challenge 5 : </h4> https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX </p>
+<p> <h4> Challenge 6 : </h4> https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8 </p>
