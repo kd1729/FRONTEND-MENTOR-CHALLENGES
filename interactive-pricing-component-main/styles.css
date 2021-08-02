@@ -36,9 +36,11 @@ body{
 
 .Inner-Main{
     margin-top: 7%;
+    width: 600px;
     display: flex;
     flex-direction: column;
     background-color: white;
+    border-radius: 10px;
 }
 
 .pageview-and-price{
@@ -60,7 +62,7 @@ body{
   .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 600px; /* Full-width */
+    width: 550px; /* Full-width */
     height: 15px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     border-radius: 10px;
@@ -68,6 +70,8 @@ body{
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
   
 
@@ -76,11 +80,14 @@ body{
   }
   
   .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
+    width: 35px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    
     background: url("./images/icon-slider.svg");
+    background-size: 35px 30px;
+    border-radius: 10px;
+
     background-repeat: no-repeat;
     background-color: rgb(12, 182, 125)    ;
     cursor: pointer; /* Cursor on hover */
@@ -88,20 +95,73 @@ body{
 
   .billing{
       display: flex;
-      justify-content: center
+      margin-left: 30%;
   }
   .discount{
-    background-color: red;
+    background-color: rgb(236, 29, 29);
     margin-left: 20px;
 }
 
+
+/* (A) HIDE DEFAULT CHECKBOX */
+.toggle input { display: none; }
+
+/* (B) TOGGLE BUTTON WRAPPER */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 20px;
+  margin: 0 10px;
+  
+}
+
+/* (C) CUSTOM TOGGLE BUTTON "OUTSIDE BOX" */
+.slider-btn {
+  /* (C1) FULLY FILL  CONTAINER */
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  /* (C2) COSMETIC STYLES */
+  cursor: pointer;
+  border: 2px solid #ddd;
+  background-color: #3e3f41;
+  border-radius: 60px;
+  border-color: black;
+}
+
+/* (D) CUSTOM TOGGLE BUTTON "INSIDE SLIDER BUTTON" */
+.slider-btn::before {
+  /* (D1) FILL UP HALF OF  CONTAINER */
+  content: "";
+  width: 40%;
+  height: 100%;
+  /* (D2) DEFAULT BUTTON POSITION - LEFT */
+  position: absolute;
+  top: 0; left: 0;
+  /* (D3) COSMETIC STYLES */
+  background-color: #dadada;
+  border-radius: 50px;
+  border-color: black;
+}
+
+/* (E) ON CHECKED (SWITCHED ON) */
+/* (E1) MAGIC CSS SLIDING ANIMATION */
+.slider-btn, .slider-btn::before { transition: all .5s; }
+/* (E2) TURN GREEN */
+.toggle input:checked + .slider-btn {
+  border: 2px solid #258805;
+  background-color: #8cbc13;
+}
+/* (E3) MOVE SLIDER BUTTON TO RIGHT */
+.toggle input:checked + .slider-btn::before { left: 50%; }
 .footer{
     display: flex;
     border-top: 1px solid grey;
 }
 
 .benifits{
-    margin: 5%;
+    margin: 8%;
 }
 
 .btn{

@@ -35,24 +35,28 @@
     <div class="Inner-Main">
       <div class="pageview-and-price">
         <div class="pageview">
-         <span id="one">5</span> Pageviews
+          <span id="one">5</span> Pageviews
         </div>
         <div class="price">
-         <span id="two">$500</span>/month
+          <span id="two">$100</span>/month
         </div>
       </div>
 
       <div class="slidecontainer">
-        <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+        <input type="range" min="1" max="10" value="5" class="slider" id="myRange" oninput="calculate()">
       </div>
 
       <div class="billing">
         <div>
-        Monthly Billing
-       </div>
-       <div>
-        Yearly Billing <span class="discount"> 25% discount</span>
-      </div>  
+          Monthly Billing
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="cToggle" onclick="check()">
+          <span class="slider-btn"></span>
+        </label>
+        <div>
+          Yearly Billing <span class="discount"> 25% discount</span>
+        </div>
       </div>
       <div class="footer">
         <div class="benifits">
