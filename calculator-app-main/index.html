@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+  <div class="Main">
+
+    <div class="heading">
+        Calculator
+    </div>
+
+    <div class="toggle-btn">
+      
+    </div>
+
+    <div class="output" id="output">
+        0        
+    </div>
+
+    <div class="input">
+        <div class="myButton" onclick="Input(7)">7</div>
+        <div class="myButton" onclick="Input(8)">8</div>
+        <div class="myButton" onclick="Input(9)">9</div>
+        <div class="myButton delete" onclick="Delete()">DEL</div>
+
+        <div class="myButton" onclick="Input(4)">4</div>
+        <div class="myButton" onclick="Input(5)">5</div>
+        <div class="myButton" onclick="Input(6)">6</div>
+        <div class="myButton" id="add" onclick="Add()">+</div>
+
+        <div class="myButton" onclick="Input(1)">1</div>
+        <div class="myButton" onclick="Input(2)">2</div>
+        <div class="myButton" onclick="Input(3)">3</div>
+        <div class="myButton" id="subtract" onclick="Subtract()">-</div>
+
+        <div class="myButton">.</div>
+        <div class="myButton" onclick="Input(0)">0</div>
+        <div class="myButton" id="divide" onclick="Divide()">/</div>
+        <div class="myButton" id="multiply" onclick="Multiply()">*</div>
+
+        <div class="myButton reset" onclick="Reset()">RESET</div>
+        <div class="myButton equal" onclick="Calculate()">=</div>  
+    </div>
+    
+  </div>
+
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>

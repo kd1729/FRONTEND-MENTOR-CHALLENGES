@@ -1,0 +1,157 @@
+/* 
+### Theme 2
+
+#### Backgrounds
+
+- Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0, 100%) 
+*/
+
+
+
+body{
+    font-family: 'Spartan', sans-serif;
+    display: grid;
+    background-color:  hsl(0, 0%, 90%);
+    place-items: center;
+    height: 100vh;
+}
+
+.Main{
+    width: 30%;
+    height: 55%;
+    background-color: transparent;
+}   
+
+.heading{
+    display: inline-block;
+    color: black;    
+}
+
+.toggle-btn{
+    display: inline-block;
+    color: black;
+}
+
+.output{
+    margin: 1rem 0;
+    height: 100px;
+    background-color: hsl(45, 15%, 80%);
+    border-radius: 10px;
+    text-align: right;
+    font-size: 3rem;
+    line-height: 100px;
+    vertical-align: middle; 
+}
+
+
+
+.input{
+    background-color: hsl(0, 5%, 81%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 8%;
+    border-radius: 10px;
+}
+
+
+.myButton {
+	box-shadow: 0px 5px 0px 0px hsl(35, 11%, 61%);
+	background-color: hsl(45, 7%, 89%);
+	border-radius:8px;
+	cursor:pointer;
+	color: black;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+    text-align: center;
+}
+.myButton:hover {
+	background-color:rgb(18, 88, 146);
+    color: white
+}
+.myButton:active {
+	position:relative;
+	top: 2px;
+}
+
+.delete, .reset{
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0px 5px 0px 0px #276873;
+    color: white;
+}
+.reset{
+    grid-column: span 2;
+}
+
+.delete:hover{
+    background-color: rgb(243, 90, 63);
+    color: black;
+}
+
+.reset:hover{
+    background-color: red;
+    color: black;
+}
+
+.equal{
+    grid-column: span 2;
+    background-color: hsl(25, 98%, 40%);
+    box-shadow:  0px 5px 0px 0px hsl(25, 99%, 27%);
+    color: white;
+    font-size: 2rem;
+}
+
+.equal:hover{
+    background-color: green;
+    color: black;
+}
+
+.active-operator{
+    background-color: chartreuse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
