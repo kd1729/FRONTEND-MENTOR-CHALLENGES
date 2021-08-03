@@ -1,110 +1,111 @@
-body{
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    font-family: 'Manrope', sans-serif;
-    /* background-color: rgb(128, 216, 216); */
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  /* background-color: rgb(128, 216, 216); */
 }
-.circles{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.Main{
-    height: 100%;
-    width: 100%;
-    background-color: hsl(230, 29%, 92%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-image: url("./images/bg-pattern.svg");
-    background-size: 100% auto;
+.circles {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.heading-1{
-    font-size: 2rem;
-    margin-top: 7%;
+.Main {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(230, 29%, 92%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/bg-pattern.svg");
+  background-size: 100% auto;
 }
 
-.heading-2{
-    color: grey;
-    margin-top: 10px;
+.heading-1 {
+  font-size: 2rem;
+  margin-top: 7%;
 }
 
-.Inner-Main{
-    margin-top: 7%;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
+.heading-2 {
+  color: grey;
+  margin-top: 10px;
 }
 
-.pageview-and-price{
-    margin-top: 10%;
-    display: flex;
-    justify-content: space-around;
+.Inner-Main {
+  margin-top: 7%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
 }
 
-#one, #two{
-    font-size: 2rem;
+.pageview-and-price {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#one,
+#two {
+  font-size: 2rem;
 }
 
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
-    
-    margin: 10% auto;
-  }
-  
-  .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 550px; /* Full-width */
-    height: 15px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    border-radius: 10px;
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  
+  width: 100%; /* Width of the outside container */
 
-  .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
-  
-  .slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 35px; /* Set a specific slider handle width */
-    height: 30px; /* Slider handle height */
-    
-    background: url("./images/icon-slider.svg");
-    background-size: 35px 30px;
-    border-radius: 10px;
-
-    background-repeat: no-repeat;
-    background-color: rgb(12, 182, 125)    ;
-    cursor: pointer; /* Cursor on hover */
-  }
-
-  .billing{
-      display: flex;
-      margin-left: 30%;
-  }
-  .discount{
-    background-color: rgb(236, 29, 29);
-    margin-left: 20px;
+  margin: 10% auto;
 }
 
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 550px; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  border-radius: 10px;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 35px; /* Set a specific slider handle width */
+  height: 30px; /* Slider handle height */
+
+  background: url("./images/icon-slider.svg");
+  background-size: 35px 30px;
+  border-radius: 10px;
+
+  background-repeat: no-repeat;
+  background-color: rgb(12, 182, 125);
+  cursor: pointer; /* Cursor on hover */
+}
+
+.billing {
+  display: flex;
+  margin-left: 30%;
+}
+.discount {
+  background-color: rgb(236, 29, 29);
+  margin-left: 20px;
+}
 
 /* (A) HIDE DEFAULT CHECKBOX */
-.toggle input { display: none; }
+.toggle input {
+  display: none;
+}
 
 /* (B) TOGGLE BUTTON WRAPPER */
 .toggle {
@@ -113,15 +114,16 @@ body{
   width: 55px;
   height: 20px;
   margin: 0 10px;
-  
 }
 
 /* (C) CUSTOM TOGGLE BUTTON "OUTSIDE BOX" */
 .slider-btn {
   /* (C1) FULLY FILL  CONTAINER */
   position: absolute;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   /* (C2) COSMETIC STYLES */
   cursor: pointer;
   border: 2px solid #ddd;
@@ -138,7 +140,8 @@ body{
   height: 100%;
   /* (D2) DEFAULT BUTTON POSITION - LEFT */
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   /* (D3) COSMETIC STYLES */
   background-color: #dadada;
   border-radius: 50px;
@@ -147,52 +150,62 @@ body{
 
 /* (E) ON CHECKED (SWITCHED ON) */
 /* (E1) MAGIC CSS SLIDING ANIMATION */
-.slider-btn, .slider-btn::before { transition: all .5s; }
+.slider-btn,
+.slider-btn::before {
+  transition: all 0.5s;
+}
 /* (E2) TURN GREEN */
 .toggle input:checked + .slider-btn {
   border: 2px solid #258805;
   background-color: #8cbc13;
 }
 /* (E3) MOVE SLIDER BUTTON TO RIGHT */
-.toggle input:checked + .slider-btn::before { left: 50%; }
-.footer{
-    display: flex;
-    border-top: 1px solid grey;
+.toggle input:checked + .slider-btn::before {
+  left: 50%;
+}
+.footer {
+  display: flex;
+  border-top: 1px solid grey;
 }
 
-.benifits{
-    margin: 8%;
+.benifits {
+  margin: 8%;
 }
 
-.btn{
-    align-self: center;
-    margin-left: 150px;
+.btn {
+  align-self: center;
+  margin-left: 150px;
 }
 
 .myButton {
-	box-shadow:inset 0px 0px 15px 3px #23395e;
-	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-	background-color:#2e466e;
-	border-radius:17px;
-	border:1px solid #1f2f47;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:14px;
-	padding:8px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
+  box-shadow: inset 0px 0px 15px 3px #23395e;
+  background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+  background-color: #2e466e;
+  border-radius: 17px;
+  border: 1px solid #1f2f47;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 8px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-	background-color:#415989;
+  background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+  background-color: #415989;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
-
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  margin-top: 2rem;
+  font-size: 20px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
