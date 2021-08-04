@@ -13,7 +13,7 @@ var p = 1;
 var calculated;
 
 var output = document.getElementById("output");
-
+var decimalFlag = false;
 
 function Input(n) {
     if (decimalFlag)
@@ -28,6 +28,7 @@ function Input(n) {
         num2 += n / p;
         output.innerText = num2;
     }
+    calculated = false;
 }
 
 function clickOperator() {
@@ -65,7 +66,6 @@ function Divide() {
     operator = 4;
 }
 
-var decimalFlag = false;
 function Decimal() {
     k = 1;
     decimalFlag = true;
