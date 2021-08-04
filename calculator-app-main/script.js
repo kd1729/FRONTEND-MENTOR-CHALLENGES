@@ -10,6 +10,8 @@ var temp1 = true;
 var k = 10;
 var p = 1;
 
+var calculated;
+
 var output = document.getElementById("output");
 
 
@@ -28,44 +30,38 @@ function Input(n) {
     }
 }
 
-
-function Add() {
+function clickOperator() {
     removeActive();
     resetDecimal();
-    document.getElementById("add").classList.add("active-operator");
     output.innerText = "";
     temp1 = false;
+    calculated = false;
+}
+
+function Add() {
+    clickOperator()
+    document.getElementById("add").classList.add("active-operator");
     operator = 1;
-    
 }
 
 
 function Subtract() {
-    removeActive();
-    resetDecimal();
+    clickOperator()
     document.getElementById("subtract").classList.add("active-operator");
-    output.innerText = "";
-    temp1 = false;
     operator = 2;
 }
 
 
 function Multiply() {
-    removeActive();
-    resetDecimal();
+    clickOperator()
     document.getElementById("multiply").classList.add("active-operator");
-    output.innerText = "";
-    temp1 = false;
     operator = 3;
 }
 
 
 function Divide() {
-    removeActive();
-    resetDecimal();
+    clickOperator()
     document.getElementById("divide").classList.add("active-operator");
-    output.innerText = "";
-    temp1 = false;
     operator = 4;
 }
 
@@ -75,7 +71,9 @@ function Decimal() {
     decimalFlag = true;
 }
 
+
 function Calculate() {
+    calculated = true;
     if (operator == 1)
         ans = num1 + num2;
     if (operator == 2)
@@ -100,7 +98,8 @@ function Calculate() {
 
 
 function Delete() {
-    if (temp1) {
+    if (calculated) Reset();
+    else if (temp1) {
         num1 = parseInt(num1 / 10);
         output.innerText = num1;
     }
@@ -122,7 +121,7 @@ function Reset() {
     removeActive();
 }
 
-function resetDecimal(){
+function resetDecimal() {
     k = 10;
     p = 1;
     decimalFlag = false;
