@@ -141,17 +141,18 @@ body {
 @media (max-width: 500px) {
   .Main {
     width: 80vw;
-    height: 90%;
+    height: 80vh;;
   }
 
   .output {
-    margin: 1rem 0;
-    height: 70px;
-    font-size: 2rem;
-    line-height: 70px;
+    margin: 2rem 0;
+    height: 90px;
+    font-size: 2.5rem;
+    line-height: 90px;
   }
 
   .input {
+    height: 50vh;
     padding: 3%;
     row-gap: 10px;
     column-gap: 10px;
@@ -159,7 +160,6 @@ body {
 
   .myButton {
     font-size: 16px;
-    font-weight: bold;
     padding: 10px 25px;
   }
 }
