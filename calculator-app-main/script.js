@@ -73,13 +73,29 @@ function Decimal() {
 
 
 function Calculate() {
+
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    if (isNaN(num1) || isNaN(num2)) { // Values validation
+      return Number.NaN;
+    }
+  
+    var strNum1 = num1 + '',
+      strNum2 = num2 + '',
+      dpNum1 = !!(num1 % 1) ? (strNum1.length - strNum1.indexOf('.') - 1) : 0, // Get total decimal places of num1
+      dpNum2 = !!(num2 % 1) ? (strNum2.length - strNum2.indexOf('.') - 1) : 0, // Get total decimal places of num2
+      multiplier = Math.pow(10, dpNum1 > dpNum2 ? dpNum1 : dpNum2), // Compare dpNum1 and dpNum2, then find value of 10 to the power of the largest between them.
+      tempNum1 = Math.round(num1 * multiplier), // Multiply num1 by multiplier to eliminate all decimal places of num1.
+      tempNum2 = Math.round(num2 * multiplier); // Multiply num2 by multiplier to eliminate all decimal places of num2.
+
+  
     calculated = true;
     if (operator == 1)
-        ans = num1 + num2;
+        ans = (tempNum1 + tempNum2) / multiplier;
     if (operator == 2)
-        ans = num1 - num2;
+        ans = (tempNum1 - tempNum2) / multiplier;
     if (operator == 3)
-        ans = num1 * num2;
+        ans = (tempNum1 * tempNum2) / (multiplier * multiplier);
     if (operator == 4) {
         if (num2 == 0) {
             ans = "";
@@ -87,10 +103,10 @@ function Calculate() {
             Reset();
         }
         else
-            ans = num1 / num2;
+            ans = (tempNum1 / tempNum2);
     }
     output.innerText = ans;
-    num1 = parseInt(output.innerText);
+    num1 = parseFloat(output.innerText);
     num2 = 0;
 
     removeActive();
@@ -107,17 +123,16 @@ function Delete() {
         num2 = parseInt(num2 / 10);
         output.innerText = num2;
     }
+    console.log(num1);
 }
 
 
 function Reset() {
     temp1 = true;
-    temp2 = false;
     num1 = 0;
     num2 = 0;
     output.innerText = 0;
-    p = 1;
-    decimalFlag = false;
+    resetDecimal();
     removeActive();
 }
 
