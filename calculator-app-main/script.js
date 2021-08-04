@@ -14,14 +14,16 @@ var output = document.getElementById("output");
 
 
 function Input(n) {
-    if (temp1){
+    if (decimalFlag)
+        p *= 10;
+    if (temp1) {
         num1 *= k;
-        num1 += n/p;
+        num1 = num1 + n / p;
         output.innerText = num1;
     }
-    else{
+    else {
         num2 *= k;
-        num2 += n/p;
+        num2 += n / p;
         output.innerText = num2;
     }
 }
@@ -29,15 +31,18 @@ function Input(n) {
 
 function Add() {
     removeActive();
+    resetDecimal();
     document.getElementById("add").classList.add("active-operator");
     output.innerText = "";
     temp1 = false;
     operator = 1;
+    
 }
 
 
 function Subtract() {
     removeActive();
+    resetDecimal();
     document.getElementById("subtract").classList.add("active-operator");
     output.innerText = "";
     temp1 = false;
@@ -47,6 +52,7 @@ function Subtract() {
 
 function Multiply() {
     removeActive();
+    resetDecimal();
     document.getElementById("multiply").classList.add("active-operator");
     output.innerText = "";
     temp1 = false;
@@ -56,17 +62,17 @@ function Multiply() {
 
 function Divide() {
     removeActive();
+    resetDecimal();
     document.getElementById("divide").classList.add("active-operator");
     output.innerText = "";
     temp1 = false;
     operator = 4;
 }
 
-function Decimal(){
-    if(temp1){
-        k = 1;
-        p = 10;
-    }
+var decimalFlag = false;
+function Decimal() {
+    k = 1;
+    decimalFlag = true;
 }
 
 function Calculate() {
@@ -112,7 +118,14 @@ function Reset() {
     num2 = 0;
     output.innerText = 0;
     p = 1;
+    decimalFlag = false;
     removeActive();
+}
+
+function resetDecimal(){
+    k = 10;
+    p = 1;
+    decimalFlag = false;
 }
 
 
