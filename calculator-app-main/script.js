@@ -135,3 +135,5 @@ function removeActive() {
     document.getElementById("divide").classList.remove("active-operator");
 }
 
+
+
