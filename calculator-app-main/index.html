@@ -18,29 +18,32 @@
 
 <body>
 
-  <div class="Main">
+  <div class="Main" id="Main">
+    <div class="header">
+      <div class="heading" id="heading">
+        Calculator
+      </div>
 
-    <div class="heading">
-      Calculator
-    </div>
-
-    <div class="toggle-btn">
-
+      <div class="toggle-btn">
+        THEME
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+      </div>
     </div>
 
 
     <div class="expression" id="expression">
-      
+      <!-- display last expression calculated -->
     </div>
-    <div class="output" id="output">
+    <div class="output" id="output1">
       0
     </div>
 
-    <div class="input">
+    <div class="input" id="input1">
       <div class="myButton" onclick="Input(7)">7</div>
       <div class="myButton" onclick="Input(8)">8</div>
       <div class="myButton" onclick="Input(9)">9</div>
-      <div class="myButton delete" onclick="Delete()">DEL</div>
+      <div class="myButton delete" id="delete" onclick="Delete()">DEL</div>
 
       <div class="myButton" onclick="Input(4)">4</div>
       <div class="myButton" onclick="Input(5)">5</div>
@@ -57,8 +60,8 @@
       <div class="myButton" id="divide" onclick="Divide()">/</div>
       <div class="myButton" id="multiply" onclick="Multiply()">*</div>
 
-      <div class="myButton reset" onclick="Reset()">RESET</div>
-      <div class="myButton equal" onclick="Calculate()">=</div>
+      <div class="myButton reset" id="reset" onclick="Reset()">RESET</div>
+      <div class="myButton equal" id="calculate" onclick="Calculate()">=</div>
     </div>
 
   </div>

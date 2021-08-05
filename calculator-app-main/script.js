@@ -12,7 +12,7 @@ var p = 1;
 
 var calculated;
 
-var output = document.getElementById("output");
+var output = document.getElementById("output1");
 var Expression = document.getElementById("expression");
 var decimalFlag = false;
 
@@ -73,29 +73,21 @@ function Decimal() {
     decimalFlag = true;
 }
 
-// var temp = 0;
-
 function Calculate() {
-
-    // if(calculated){
-    //     num2 = temp;
-    //     calculated = false;
-    //     Calculate();
-    // }
 
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
-    if (isNaN(num1) || isNaN(num2)) { // Values validation
+    if (isNaN(num1) || isNaN(num2)) { 
         return Number.NaN;
     }
 
     let strNum1 = num1 + '',
         strNum2 = num2 + '',
-        dpNum1 = !!(num1 % 1) ? (strNum1.length - strNum1.indexOf('.') - 1) : 0, // Get total decimal places of num1
-        dpNum2 = !!(num2 % 1) ? (strNum2.length - strNum2.indexOf('.') - 1) : 0, // Get total decimal places of num2
-        multiplier = Math.pow(10, dpNum1 > dpNum2 ? dpNum1 : dpNum2), // Compare dpNum1 and dpNum2, then find value of 10 to the power of the largest between them.
-        tempNum1 = Math.round(num1 * multiplier), // Multiply num1 by multiplier to eliminate all decimal places of num1.
-        tempNum2 = Math.round(num2 * multiplier); // Multiply num2 by multiplier to eliminate all decimal places of num2.
+        dpNum1 = !!(num1 % 1) ? (strNum1.length - strNum1.indexOf('.') - 1) : 0,
+        dpNum2 = !!(num2 % 1) ? (strNum2.length - strNum2.indexOf('.') - 1) : 0, 
+        multiplier = Math.pow(10, dpNum1 > dpNum2 ? dpNum1 : dpNum2),
+        tempNum1 = Math.round(num1 * multiplier),
+        tempNum2 = Math.round(num2 * multiplier);
 
 
     calculated = true;
@@ -125,19 +117,7 @@ function Calculate() {
     output.innerText = ans;
     Expression.innerText = num1 + ch + num2 + " = " + ans;
     num1 = parseFloat(output.innerText);
-
-    // console.log(num1);
-    // console.log(num2);
-    // console.log(temp);
-    temp = num2;
-    // console.log(num1);
-    // console.log(num2);
-    // console.log(temp);
-
     num2 = 0;
-    // console.log(num1);
-    // console.log(num2);
-    // console.log(temp);
 
 }
 
@@ -208,4 +188,36 @@ function removeActive() {
 }
 
 
+
+// Theme changer    
+
+const toggle = document.getElementById('toggle');
+
+const body = document.body;
+const buttons = document.getElementsByClassName("myButton");
+const heading = document.getElementById("heading");
+const input1 = document.getElementById("input1");
+const output1 = document.getElementById("output1");
+const Delete1 = document.getElementById("delete");
+const reset = document.getElementById("reset");
+const calculate = document.getElementById("calculate");
+
+toggle.addEventListener('input', e => {
+    const isChecked = e.target.checked;
+    body.classList.toggle('theme-dark');
+    body.classList.toggle('yellow-text-dark');
+    heading.classList.toggle('yellow-text-dark');
+    input1.classList.toggle("input-output-theme-dark");
+    output1.classList.toggle("input-output-theme-dark");
+    for(let i = 0; i < buttons.length; i++){
+        buttons[i].classList.toggle('yellow-text-dark');
+        buttons[i].classList.toggle('button-background-dark');
+    }
+    calculate.classList.toggle("equal-dark");
+    reset.classList.toggle("delete-reset-dark");
+    Delete1.classList.toggle("delete-reset-dark");
+    
+    
+
+});
 
