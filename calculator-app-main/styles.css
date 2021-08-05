@@ -40,7 +40,8 @@ body {
 
 .heading {
   display: inline-block;
-  color: black;
+  color: black; 
+  font-size: 1.5rem;
 }
 
 .toggle-btn {
@@ -58,6 +59,12 @@ body {
   line-height: 100px;
   vertical-align: middle;
   overflow: auto;
+}
+
+.expression{
+  font-size: 1.5rem;
+  color: rgb(89, 0, 255);
+  margin: 10px 0;
 }
 
 .input {

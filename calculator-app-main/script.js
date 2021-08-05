@@ -13,9 +13,11 @@ var p = 1;
 var calculated;
 
 var output = document.getElementById("output");
+var Expression = document.getElementById("expression");
 var decimalFlag = false;
 
 function Input(n) {
+    if (calculated) resetDecimal();
     if (decimalFlag)
         p *= 10;
     if (temp1) {
@@ -71,8 +73,15 @@ function Decimal() {
     decimalFlag = true;
 }
 
+// var temp = 0;
 
 function Calculate() {
+
+    // if(calculated){
+    //     num2 = temp;
+    //     calculated = false;
+    //     Calculate();
+    // }
 
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
@@ -90,26 +99,46 @@ function Calculate() {
 
 
     calculated = true;
-    if (operator == 1)
+    var ch;
+    if (operator == 1) {
         ans = (tempNum1 + tempNum2) / multiplier;
-    if (operator == 2)
+        ch = "+";;
+    }
+    if (operator == 2) {
         ans = (tempNum1 - tempNum2) / multiplier;
-    if (operator == 3)
+        ch = "-";
+    }
+    if (operator == 3) {
         ans = (tempNum1 * tempNum2) / (multiplier * multiplier);
+        ch = "*";
+    }
     if (operator == 4) {
+        ch = "/";
         if (num2 == 0) {
             ans = "";
             alert("can't divide by 0");
             Reset();
+            return;
         }
-        else
-            ans = (tempNum1 / tempNum2);
+        ans = (tempNum1 / tempNum2);
     }
     output.innerText = ans;
+    Expression.innerText = num1 + ch + num2 + " = " + ans;
     num1 = parseFloat(output.innerText);
-    num2 = 0;
 
-    removeActive();
+    // console.log(num1);
+    // console.log(num2);
+    // console.log(temp);
+    temp = num2;
+    // console.log(num1);
+    // console.log(num2);
+    // console.log(temp);
+
+    num2 = 0;
+    // console.log(num1);
+    // console.log(num2);
+    // console.log(temp);
+
 }
 
 
@@ -120,7 +149,7 @@ function Delete() {
             dpNum = !!(num1 % 1) ? (strNum.length - strNum.indexOf('.') - 1) : 0,
             multiplier = Math.pow(10, dpNum),
             tempNum = Math.round(num1 * multiplier);
-            
+
 
         if (multiplier == 1) {
             num1 = parseInt(num1 / 10);
@@ -130,7 +159,7 @@ function Delete() {
             tempNum = parseInt(tempNum / 10);
             num1 = 10 * tempNum / multiplier;
         }
-        if(multiplier == 10) resetDecimal();
+        if (multiplier == 10) resetDecimal();
         output.innerText = num1;
     }
     else {
@@ -138,7 +167,7 @@ function Delete() {
             dpNum = !!(num2 % 1) ? (strNum.length - strNum.indexOf('.') - 1) : 0,
             multiplier = Math.pow(10, dpNum),
             tempNum = Math.round(num2 * multiplier);
-            
+
 
         if (multiplier == 1) {
             num2 = parseInt(num2 / 10);
@@ -148,7 +177,7 @@ function Delete() {
             tempNum = parseInt(tempNum / 10);
             num2 = 10 * tempNum / multiplier;
         }
-        if(multiplier == 10) resetDecimal();
+        if (multiplier == 10) resetDecimal();
         output.innerText = num2;
     }
 }
@@ -161,6 +190,7 @@ function Reset() {
     output.innerText = 0;
     resetDecimal();
     removeActive();
+    Expression.innerText = "";
 }
 
 function resetDecimal() {
