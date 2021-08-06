@@ -1,0 +1,44 @@
+body{
+    background-image:  url("./images/pattern-hills.svg");
+    background-position: 8px 800px;
+    background-color: hsl(234, 17%, 12%);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.Main{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("./images/bg-stars.svg");
+}
+
+.heading{
+    color: white;
+    font-size: 2rem;
+}
+
+.countdown{
+    color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
