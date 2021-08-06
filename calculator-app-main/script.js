@@ -16,8 +16,11 @@ var output = document.getElementById("output1");
 var Expression = document.getElementById("expression");
 var decimalFlag = false;
 
+
+// Below function performs the input of two numbers num1 and num2
+// k denotes entering of Integral part, p denotes entering of decimal part
 function Input(n) {
-    if (calculated) resetDecimal();
+    if (calculated) Reset();
     if (decimalFlag)
         p *= 10;
     if (temp1) {
@@ -33,6 +36,7 @@ function Input(n) {
     calculated = false;
 }
 
+// This functions defines what should happen when user clicks on a operator
 function clickOperator() {
     removeActive();
     resetDecimal();
@@ -41,38 +45,42 @@ function clickOperator() {
     calculated = false;
 }
 
+// Add operrator
 function Add() {
     clickOperator()
     document.getElementById("add").classList.add("active-operator");
     operator = 1;
 }
 
-
+// Subtract Operator
 function Subtract() {
     clickOperator()
     document.getElementById("subtract").classList.add("active-operator");
     operator = 2;
 }
 
-
+// Multiply Operator
 function Multiply() {
     clickOperator()
     document.getElementById("multiply").classList.add("active-operator");
     operator = 3;
 }
 
-
+// Divide Operator
 function Divide() {
     clickOperator()
     document.getElementById("divide").classList.add("active-operator");
     operator = 4;
 }
 
+// If user press decimal then make  k = 1 means stop entering integral part and 
+// make decimalflag = true means start entering decimal part
 function Decimal() {
     k = 1;
     decimalFlag = true;
 }
 
+// performs the major calculation by using the selected operator
 function Calculate() {
 
     num1 = parseFloat(num1);
@@ -119,9 +127,11 @@ function Calculate() {
     num1 = parseFloat(output.innerText);
     num2 = 0;
 
+    removeActive();
+
 }
 
-
+// Deletes the rightmost digit
 function Delete() {
     if (calculated) Reset();
     else if (temp1) {
@@ -162,7 +172,7 @@ function Delete() {
     }
 }
 
-
+// Resets the calculator
 function Reset() {
     temp1 = true;
     num1 = 0;
@@ -173,13 +183,14 @@ function Reset() {
     Expression.innerText = "";
 }
 
+//Resets the decimal : entering integer part on and entering decimal part off
 function resetDecimal() {
     k = 10;
     p = 1;
     decimalFlag = false;
 }
 
-
+// removes the active operator
 function removeActive() {
     document.getElementById("add").classList.remove("active-operator");
     document.getElementById("subtract").classList.remove("active-operator");
@@ -216,8 +227,6 @@ toggle.addEventListener('input', e => {
     calculate.classList.toggle("equal-dark");
     reset.classList.toggle("delete-reset-dark");
     Delete1.classList.toggle("delete-reset-dark");
-    
-    
 
 });
 
