@@ -85,14 +85,14 @@ function Calculate() {
 
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
-    if (isNaN(num1) || isNaN(num2)) { 
+    if (isNaN(num1) || isNaN(num2)) {
         return Number.NaN;
     }
 
     let strNum1 = num1 + '',
         strNum2 = num2 + '',
         dpNum1 = !!(num1 % 1) ? (strNum1.length - strNum1.indexOf('.') - 1) : 0,
-        dpNum2 = !!(num2 % 1) ? (strNum2.length - strNum2.indexOf('.') - 1) : 0, 
+        dpNum2 = !!(num2 % 1) ? (strNum2.length - strNum2.indexOf('.') - 1) : 0,
         multiplier = Math.pow(10, dpNum1 > dpNum2 ? dpNum1 : dpNum2),
         tempNum1 = Math.round(num1 * multiplier),
         tempNum2 = Math.round(num2 * multiplier);
@@ -199,6 +199,37 @@ function removeActive() {
 }
 
 
+// Keyboard Input
+
+document.addEventListener("keydown", e => {
+    if (e.key == " ") Reset();
+    else
+        KeyPress(e.key);
+});
+
+function KeyPress(key) {
+
+    switch (key) {
+        case "1": Input(1); break;
+        case "2": Input(2); break;
+        case "3": Input(3); break;
+        case "4": Input(4); break;
+        case "5": Input(5); break;
+        case "6": Input(6); break;
+        case "7": Input(7); break;
+        case "8": Input(8); break;
+        case "9": Input(9); break;
+        case "0": Input(0); break;
+        case ".": Decimal(); break;
+        case "+": Add(); break;
+        case "-": Subtract(); break;
+        case "*": Multiply(); break;
+        case "/": Divide(); break;
+        case "Enter": Calculate(); break;
+        case "Backspace": Delete(); break;  
+    }
+}
+
 
 // Theme changer    
 
@@ -220,7 +251,7 @@ toggle.addEventListener('input', e => {
     heading.classList.toggle('yellow-text-dark');
     input1.classList.toggle("input-output-theme-dark");
     output1.classList.toggle("input-output-theme-dark");
-    for(let i = 0; i < buttons.length; i++){
+    for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.toggle('yellow-text-dark');
         buttons[i].classList.toggle('button-background-dark');
     }
