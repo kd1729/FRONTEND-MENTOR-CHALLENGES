@@ -1,44 +1,66 @@
-body{
-    background-image:  url("./images/pattern-hills.svg");
-    background-position: 8px 800px;
-    background-color: hsl(234, 17%, 12%);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 100vh;
-    font-family: 'Red Hat Text', sans-serif;
+body {
+  background-image: url("./images/pattern-hills.svg");
+  background-position: bottom;
+  background-color: hsl(234, 17%, 12%);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+  font-family: "Red Hat Text", sans-serif;
+  display: grid;
+  place-items: center;
 }
 
-.Main{
-    height: 80vh;
-    width: 100vw;
-    background-image: url("./images/bg-stars.svg");
+.Main {
+  height: 80vh;
+  width: 60vw;
+  background-image: url("./images/bg-stars.svg");
+  display: flex;
+  flex-direction: column;
 }
 
-.heading{
-    color: white;
-    font-size: 2rem;
+.heading {
+  display: inline-block;
+  color: white;
+  /* background-color: yellowgreen; */
+  font-size: 2rem;
+  align-self: center;
+  letter-spacing: 8px;
+  margin-top: 10%;
 }
 
-.countdown{
-    color: whitesmoke;
+.countdown,
+.countdown-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: hsl(345, 95%, 68%);
+  font-size: 5rem;
 }
 
+.countdown {
+  margin-top: 10%;
+  font-size: 5rem;
+}
 
+.countdown-footer {
+  font-size: 2rem;
+  color: rgb(245, 229, 229);
+}
 
+.contact-us img{
+    margin-left: 40px;
+    margin-right: 40px;
+}
 
+/* .contact-us a:hover img{
+    color: rgb(233, 114, 35) !important;
+} */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 1.8rem;
+  text-align: center;
+  color: aqua;
+}
+.attribution a {
+  color: hsl(54, 83%, 55%);
+}
