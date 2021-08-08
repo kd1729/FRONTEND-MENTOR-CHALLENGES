@@ -8,6 +8,7 @@ body {
   font-family: "Red Hat Text", sans-serif;
   display: grid;
   place-items: center;
+  background-attachment: fixed;
 }
 
 .Main {
