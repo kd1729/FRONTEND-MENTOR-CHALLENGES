@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+  background-image: url("./images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  font-family: 'Rubik', sans-serif;
+}
+
+.heading{
+  text-align: center;
+  font-size: 3rem;
+  color: aliceblue;
+  margin-top: 2%;
+}
+
+.searchbar{
+  text-align: center;  
+  margin-top: 2%;
+}
+
+.search{
+  width: 30%;
+  height: 3rem;
+  font-size: 1.6rem;
+  border-radius: 20px;
+}
+
+#mapid{
+  margin-top: 100px;
+  height: 500px;
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
