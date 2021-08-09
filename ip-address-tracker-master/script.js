@@ -20,3 +20,17 @@ function onMapClick(e) {
 
 mymap.on('click', onMapClick);
 
+
+// var IP = document.getElementById("search");
+// var ip = IP.value;
+// var api_key = "at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6";
+
+// function searchIP () {
+//     $.ajax({
+//         url: "https://geo.ipify.org/api/v1",
+//         data: { apiKey: api_key, ipAddress: ip },
+//         success: function (data) {
+//             $("body").append("<pre>" + JSON.stringify(data, "", 2) + "</pre>");
+//         }
+//     });
+// };
