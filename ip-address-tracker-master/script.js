@@ -51,7 +51,7 @@ mymap.on('click', onMapClick);
 
 var IP = document.getElementById("search");
 var ip = IP.value;
-var url =  ip;
+var url = "https://geo.ipify.org/api/v1?apiKey=at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6&ipAddress=" + ip;
 
 function searchIP() {
   fetch(url)
