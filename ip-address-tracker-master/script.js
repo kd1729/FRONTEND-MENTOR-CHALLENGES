@@ -56,7 +56,7 @@ function searchIP() {
   var IP = document.getElementById("search");
   var ip = IP.value;
   var url = "https://geo.ipify.org/api/v1?apiKey=at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6&ipAddress=" + ip;
-  fetch("url")
+  fetch(url)
   .then(response => response.json())
   .then(json => console.log(json));
 }
