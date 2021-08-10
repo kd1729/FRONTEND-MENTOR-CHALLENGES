@@ -121,7 +121,7 @@ body {
   }
 
   .search {
-    width: 50%;
+    width: 300px;
     height: 2rem;
     font-size: 1.3rem;
     border-radius: 15px;
@@ -129,6 +129,7 @@ body {
   }
 
   .myButton {
+    margin-top: 0.5rem;
     font-size: 20px;
     padding: 5px 20px;
   }
