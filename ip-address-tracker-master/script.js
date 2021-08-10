@@ -1,5 +1,5 @@
 // Mapping API
-
+/*
 var mymap = L.map('mapid').setView([26.41, 82.54], 10);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -20,14 +20,22 @@ function onMapClick(e) {
         .openOn(mymap);
 }
 
+
 mymap.on('click', onMapClick);
+*/
+
+
+
+
+
+
 
 // IP Geolocation API
 
 
-var IP = document.getElementById("search");
-var ip = IP.value;
-var api_key = "at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6";
+// var IP = document.getElementById("search");
+// var ip = IP.value;
+// var api_key = "at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6";
 
 // $("#search").click(function () {
 //     $.ajax({
