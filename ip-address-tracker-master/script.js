@@ -43,7 +43,7 @@ var api_key = "at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6";
 
 
 function searchIP() {
-  fetch("http://fakeapi.jsonparseronline.com/comments/1")
+  fetch("https://jsonplaceholder.typicode.com/todos/")
   .then(response => response.json())
   .then(json => console.log(json))
   }
