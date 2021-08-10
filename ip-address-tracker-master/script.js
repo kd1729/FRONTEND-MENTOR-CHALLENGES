@@ -1,5 +1,5 @@
 // Mapping API
-/*
+
 var mymap = L.map('mapid').setView([26.41, 82.54], 10);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -22,7 +22,7 @@ function onMapClick(e) {
 
 
 mymap.on('click', onMapClick);
-*/
+
 
 
 
@@ -33,8 +33,8 @@ mymap.on('click', onMapClick);
 // IP Geolocation API
 
 
-// var IP = document.getElementById("search");
-// var ip = IP.value;
+
+
 // var api_key = "at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6";
 
 // $("#search").click(function () {
@@ -49,11 +49,19 @@ mymap.on('click', onMapClick);
 //  });
 
 
+var IP = document.getElementById("search");
+var ip = IP.value;
+var url = "https://geo.ipify.org/api/v1?apiKey=at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6&ipAddress=" + ip;
 
 function searchIP() {
-  fetch("https://jsonplaceholder.typicode.com/todos/")
+  fetch(url)
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(json => console.log(json));
   }
 
-  
+
+// async  function searchIP() {
+//     let response = await fetch("https://jsonplaceholder.typicode.com/todos/")
+//     let data = await response.json();
+//     console.log(data);
+//     }
