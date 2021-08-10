@@ -1,6 +1,7 @@
-*{
+* {
   margin: 0;
-  padding: 0;  
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,22 +9,22 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% auto;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
-.heading{
+.heading {
   text-align: center;
   font-size: 3rem;
   color: aliceblue;
   margin-top: 2%;
 }
 
-.searchbar{
-  text-align: center;  
+.searchbar {
+  text-align: center;
   margin-top: 2%;
 }
 
-.search{
+.search {
   width: 30%;
   height: 3rem;
   font-size: 1.6rem;
@@ -31,90 +32,95 @@ body {
   padding-left: 1rem;
 }
 
-.info{
+.info {
   display: flex;
   background-color: white;
   justify-content: space-around;
   height: 250px;
   margin-top: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.ip-address, .location, .timezone, .ISP{
+.ip-address,
+.location,
+.timezone,
+.ISP {
   margin-top: 5%;
-} 
+}
 
-.info h3{
+.info h3 {
   font-size: 1.4rem;
   color: grey;
   text-align: center;
 }
 
-.info p{
+.info p {
   font-size: 2.5rem;
   margin-top: 1rem;
   font-weight: 700;
   text-align: center;
 }
 
-.vertical-line{
+.vertical-line {
   border-left: 2px solid;
   margin-top: 3%;
-  height: 150px; 
+  height: 150px;
 }
 
-
-
-
-#mapid{
+#mapid {
   margin-top: 00px;
   height: 1000px;
   width: auto;
 }
 
-
-
 .myButton {
-	box-shadow:inset 0px 1px 3px 0px #91b8b3;
-	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-	background-color:#768d87;
-	border-radius:5px;
-	border:1px solid #566963;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:30px;
-	font-weight:bold;
-	padding:10px 30px;
-	text-decoration:none;
-	text-shadow:0px -1px 0px #2b665e;
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #4d645e 5%, #a9f1f1 100%);
+  background-color: #81b8a9;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #dbdfd3;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
-	background-color:#6c7c7c;
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
+}
+
+.attribution {
+  padding: 1rem 0;
+  background-color: rgb(205, 255, 209);
+  font-size: 32px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 
-
-@media (max-width : 400px){
+@media (max-width: 500px) {
   body {
-    background-image: url("./images/pattern-bg.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: 1000px auto;
   }
-  
-  .heading{
-    text-align: center;
+
+  .heading {
     font-size: 2rem;
-    color: aliceblue;
     margin-top: 1%;
   }
-  
-  .search{
+
+  .search {
     width: 50%;
     height: 2rem;
     font-size: 1.3rem;
@@ -122,51 +128,38 @@ body {
     padding-left: 0.5rem;
   }
 
-  .myButton{
+  .myButton {
     font-size: 20px;
     padding: 5px 20px;
   }
-  
-  .info{
+
+  .info {
     display: flex;
     flex-direction: column;
     height: 500px;
     margin-top: 20px;
   }
-  .vertical-line{
+  .vertical-line {
     display: none;
   }
-  .ip-address, .location, .timezone, .ISP{
+  .ip-address,
+  .location,
+  .timezone,
+  .ISP {
     margin-top: 0;
-  } 
-  .info h3{
+  }
+  .info h3 {
     font-size: 1rem;
     color: grey;
   }
-  
-  .info p{
-    font-size: 2rem;;
+
+  .info p {
+    font-size: 2rem;
     margin: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  .attribution{
+    font-size: 20px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
