@@ -43,18 +43,9 @@ var api_key = "at_q49o2j7ZW4KSwREIkNEiEgz6sqrZ6";
 
 
 function searchIP() {
-    fetch(`https://geo.ipify.org/api/v1?apiKey=${api_key}ipAddress=${ip}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const newInfo = {
-          ip: data.ip,
-          location: `${data.location.region}, ${data.location.city} ${data.location.postalCode}`,
-          timezone: `UTC${data.location.timezone}`,
-          isp: data.isp,
-        };
-
-        console.log(newInfo);
-        
-      })
-      .catch((err) => console.log(err));
+  fetch("http://fakeapi.jsonparseronline.com/comments/1")
+  .then(response => response.json())
+  .then(json => console.log(json))
   }
+
+  
