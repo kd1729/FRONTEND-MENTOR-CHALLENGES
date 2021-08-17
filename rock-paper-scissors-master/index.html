@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <div class="scoreboard">
+    <div class="game-name">
+      <span>ROCK</span> <br>
+      <span>PAPER</span> <br>
+      <span>SCISSORS</span>
+    </div>
+    <div class="game-score">
+      <span>SCORE</span>
+      <span id="score"></span>
+    </div>
+  </div>
+
+  <!-- Choosing your weapon -->
+
+  <div class="choose">
+    <div class="choose-rock"></div>
+    <div class="choose-paper"></div>
+    <div class="choose-scissors"></div>
+  </div>
+
+
+  <!-- Playing the Game -->
+
+
+  <div class="picked">
+    <div class="one">
+      <div class="you"> You Picked</div>
+      <div class="img-paper "></div>
+    </div>
+
+    <div class="result">
+      
+    </div>
+
+    <div class="two">
+      <div class="house"> House Picked</div>
+      <div class="img-scissors"></div>
+    </div>
+  </div>
+
+  <!-- Rules POPUP -->
+  <input type="checkbox" id="check" style="display:none;">
+  <label for="check">
+    <div class="rules">Rules</div>
+  </label>
+  <label for="check">
+    <div id="cover">
+      <div id="box">
+        <img src="./images/image-rules.svg" width="400">
+      </div>
+    </div>
+  </label>
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
