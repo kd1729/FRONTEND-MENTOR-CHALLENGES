@@ -3,18 +3,17 @@ var HOUSE = document.getElementById("house");
 var CHOOSE = document.getElementById("choose");
 var PICKED = document.getElementById("picked");
 
-var Val, idx;
+var idx;
 var YouClass, HouseClass;
 var array = ["img-scissors", "img-rock", "img-paper"];
 var score = 0;
 var result = document.getElementById("result");
 
-function myInput(val) {
+function myInput(Val) {
 
     CHOOSE.style.display = "none";
     PICKED.style.display = "flex";
             
-    Val = val
     idx = Math.floor(Math.random() * 3);
     HouseClass = array[idx];
 
@@ -22,16 +21,16 @@ function myInput(val) {
     YOU.classList.add(YouClass);
     HOUSE.classList.add(HouseClass);
 
-    if (Val > idx || (Val === 0 && idx === 2)){
+    if (Val > idx && (Val !== 2 || idx !== 0) || (Val === 0 && idx === 2) ){
         score++;
         result.innerText = "You Won 😀";
     }
-    else if (Val < idx || (Val === 2 && idx === 0)){
-        score--;
-        result.innerText = "You Lost 😪";
+    else if (Val == idx) {
+        result.innerText = "Draw 😐";
     }
     else{
-        result.innerText = "Draw 😐";
+        score--;
+        result.innerText = "You Lost 😪";
     }
    document.getElementById("score").innerText = score;
 }
