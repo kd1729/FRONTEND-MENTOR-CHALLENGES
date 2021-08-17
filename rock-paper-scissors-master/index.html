@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
     rel="stylesheet">
 
-  
+
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="styles.css">
@@ -33,37 +33,38 @@
       <span>SCISSORS</span>
     </div>
     <div class="game-score">
-      <span>SCORE</span>
-      <span id="score"></span>
+      <span>SCORE</span> <br>
+      <span id="score" class="score">0</span>
     </div>
   </div>
 
   <!-- Choosing your weapon -->
 
-  <div class="choose">
-    <div class="choose-rock"></div>
-    <div class="choose-paper"></div>
-    <div class="choose-scissors"></div>
+  <div id="choose" class="choose">
+    <div class="choose-scissors" onclick="myInput(0)"></div>
+    <div class="choose-rock" onclick="myInput(1)"></div>
+    <div class="choose-paper" onclick="myInput(2)"></div>
   </div>
 
 
   <!-- Playing the Game -->
 
 
-  <div class="picked">
+  <div id="picked" class="picked">
     <div class="one">
       <div class="you"> You Picked</div>
-      <div class="img-paper "></div>
+      <div id="you"></div>
     </div>
 
-    <div class="result">
-      
+    <div id="result" class="result">
     </div>
 
     <div class="two">
       <div class="house"> House Picked</div>
-      <div class="img-scissors"></div>
+      <div id="house"></div>
     </div>
+
+    <div class="play-again" onclick="playAgain()"> PLAY AGAIN </div>
   </div>
 
   <!-- Rules POPUP -->
@@ -74,12 +75,12 @@
   <label for="check">
     <div id="cover">
       <div id="box">
-        <img src="./images/image-rules.svg" width="400">
+        <img src="./images/image-rules.svg">
       </div>
     </div>
   </label>
 
-
+  <div class="reset" onclick="Reset()"> RESET </div>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

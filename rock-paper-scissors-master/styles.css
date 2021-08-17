@@ -38,6 +38,9 @@ body {
     margin-left: 60%;
     border-radius: 8px;
 }
+.score{
+  font-size: 4rem;
+}
 
 .choose{
   position: relative;
@@ -80,31 +83,32 @@ body {
   border: 15px solid blue;
   background: url("./images/icon-rock.svg");
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  bottom: 2rem;
+  left: 10rem;
 }
 
 .choose-rock:active{
-  top: 30px;
+  bottom: 34px;
 }
 
 .choose-scissors{
   background: url("./images/icon-scissors.svg");
   border: 15px solid yellow;
   position: absolute;
-  bottom: 2rem;
-  left: 10rem;
+  top: 2rem;
+  right: 1rem;
+  
 }
 
 .choose-scissors:active{
-  bottom: 34px;
+  top: 30px;
 }
 
 .picked{
   width: 50%;
-  display: flex;
   display: none;
   justify-content: space-around;
+  position: relative;
 }
 
 
@@ -140,6 +144,31 @@ body {
 }
 
 
+.result{
+  margin-top: 7rem;
+  font-size: 4rem;
+  height: 100px;
+  width: auto;
+}
+
+.play-again{
+  background-color: white;
+  color: red;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  text-align: center;
+  position: absolute;
+  bottom: 1px;
+  border-radius: 10px;
+}
+
+.play-again:hover{
+  cursor: pointer;
+}
+
 
 .rules{
     position: absolute;
@@ -153,13 +182,12 @@ body {
     background-color: brown;
 }
 
-
-
-
-
-
-
-
+.reset{
+  background-color: royalblue;
+  font-size: 2rem;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
 
 /* Rules Popup */
 #check:checked ~ label #cover {
@@ -171,7 +199,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   display: none;
 }
 #box {
@@ -181,9 +209,14 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border: 10px solid white;
+}
+
+#box img{
+  width: 430px;
+  height: 430px;
 }
 
 .attribution {
@@ -193,3 +226,5 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+
