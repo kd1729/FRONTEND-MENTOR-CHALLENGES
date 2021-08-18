@@ -6,43 +6,44 @@
 
 body {
   height: 100vh;
-  width: auto;
+  width: 100vw;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   font-family: "Barlow Semi Condensed", sans-serif;
-  color: beige;
+  color: rgb(245, 237, 237);
   display: grid;
   place-items: center;
 }
 
-.scoreboard{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 10px;
+.scoreboard {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10px;
 }
-.game-name{
-    margin: 1rem;
-    line-height: 1;
-    font-size: 3rem;
+.game-name {
+  margin: 1rem;
+  line-height: 1;
+  font-size: 3rem;
 }
 
-.game-score{
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1rem;
-    color: black;
-    height: 8rem;
-    width: 8rem;
-    margin-left: 60%;
-    border-radius: 8px;
+.game-score {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: rgb(48, 46, 146);
+  height: 8rem;
+  width: 8rem;
+  margin-left: 60%;
+  border-radius: 8px;
 }
-.score{
+.score {
   font-size: 4rem;
+  color: hsl(229, 25%, 31%);
 }
 
-.choose{
+.choose {
   position: relative;
   background: url("./images/bg-triangle.svg");
   background-repeat: no-repeat;
@@ -51,7 +52,7 @@ body {
   width: 500px;
 }
 
-.choose > div{
+.choose > div {
   background-position: center;
   background-color: white;
   height: 200px;
@@ -61,13 +62,11 @@ body {
   border-radius: 50%;
 }
 
-.choose > div:hover{
+.choose > div:hover {
   cursor: pointer;
 }
 
-
-
-.choose-paper{
+.choose-paper {
   border: 15px solid red;
   background: url("./images/icon-paper.svg");
   position: absolute;
@@ -75,11 +74,11 @@ body {
   left: 1rem;
 }
 
-.choose-paper:active{
+.choose-paper:active {
   top: 30px;
 }
 
-.choose-rock{
+.choose-rock {
   border: 15px solid blue;
   background: url("./images/icon-rock.svg");
   position: absolute;
@@ -87,52 +86,51 @@ body {
   left: 10rem;
 }
 
-.choose-rock:active{
+.choose-rock:active {
   bottom: 34px;
 }
 
-.choose-scissors{
+.choose-scissors {
   background: url("./images/icon-scissors.svg");
   border: 15px solid yellow;
   position: absolute;
   top: 2rem;
   right: 1rem;
-  
 }
 
-.choose-scissors:active{
+.choose-scissors:active {
   top: 30px;
 }
 
-.picked{
+.picked {
   width: 50%;
   display: none;
   justify-content: space-around;
   position: relative;
 }
 
-
-.img-scissors{
+.img-scissors {
   background: url("./images/icon-scissors.svg");
   border: 15px solid yellow;
 }
-.img-rock{
+.img-rock {
   background: url("./images/icon-rock.svg");
   border: 15px solid blue;
 }
-.img-paper{
+.img-paper {
   background: url("./images/icon-paper.svg");
   border: 15px solid red;
 }
 
-.you, .house{
+.you,
+.house {
   text-align: center;
   font-size: 2rem;
 }
 
-
-
-.img-scissors, .img-rock, .img-paper{
+.img-scissors,
+.img-rock,
+.img-paper {
   margin-top: 5rem;
   background-position: center;
   background-color: white;
@@ -143,15 +141,13 @@ body {
   border-radius: 50%;
 }
 
-
-.result{
+.result {
   margin-top: 7rem;
   font-size: 4rem;
-  height: 100px;
-  width: auto;
+  text-align: center;
 }
 
-.play-again{
+.play-again {
   background-color: white;
   color: red;
   width: 200px;
@@ -165,24 +161,23 @@ body {
   border-radius: 10px;
 }
 
-.play-again:hover{
+.play-again:hover {
   cursor: pointer;
 }
 
-
-.rules{
-    position: absolute;
-    bottom: 3rem;
-    right: 3rem;
-    text-align: center;
-    line-height: 3rem;
-    height: 3rem;
-    width: 4rem;
-    border-radius: 5px;
-    background-color: brown;
+.rules {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  height: 3rem;
+  width: 4rem;
+  border-radius: 5px;
+  background-color: brown;
 }
 
-.reset{
+.reset {
   background-color: royalblue;
   font-size: 2rem;
   padding: 20px 40px;
@@ -214,17 +209,156 @@ body {
   border: 10px solid white;
 }
 
-#box img{
+#box img {
   width: 430px;
   height: 430px;
 }
 
+/* Footer */
 .attribution {
-  font-size: 11px;
+  font-size: 1.5rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
+@media (max-width: 400px) {
+  body {
+    display: block;
+    overflow: hidden;
+  }
+  .scoreboard {
+    width: 300px;
+    margin: 1rem auto;
+  }
+  .game-name {
+    margin: 0.4rem;
+    font-size: 2rem;
+  }
 
+  .game-score {
+    height: 5rem;
+    width: 5rem;
+    padding: 0.5rem;
+    margin-left: 25%;
+  }
+
+  .score {
+    font-size: 1.4rem;
+  }
+
+  .choose {
+    margin: 4rem auto;
+    height: 250px;
+    width: 250px;
+  }
+
+  .choose > div {
+    height: 100px;
+    width: 100px;
+    background-size: 50px 50px;
+  }
+
+  .choose-paper {
+    border: 7px solid red;
+    top: -1rem;
+    left: -1rem;
+  }
+
+  .choose-paper:active {
+    top: 10px;
+  }
+
+  .choose-rock {
+    border: 7px solid blue;
+    bottom: -1rem;
+    left: 5rem;
+  }
+
+  .choose-rock:active {
+    bottom: 10px;
+  }
+
+  .choose-scissors {
+    border: 7px solid yellow;
+    top: -1rem;
+    right: -1rem;
+  }
+
+  .choose-scissors:active {
+    top: 10px;
+  }
+
+  .picked {
+    width: 90%;
+    margin: 7rem auto;
+  }
+
+  .img-scissors {
+    border: 7px solid yellow;
+  }
+  .img-rock {
+    border: 7px solid blue;
+  }
+  .img-paper {
+    border: 7px solid red;
+  }
+  
+  .you,
+  .house {
+    font-size: 1.6rem;
+  }
+  .img-scissors,
+  .img-rock,
+  .img-paper {
+    margin-top: 2rem;
+    height: 100px;
+    width: 100px;
+    background-size: 50px 50px;
+  }
+
+  .result {
+    margin-top: 6rem;
+    font-size: 1.6rem;
+  }
+
+  .play-again {
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 1.6px;
+    font-size: 1.2rem;
+    bottom: -3rem;
+  }
+
+  .rules {
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    height: 2rem;
+    width: 3rem;
+  }
+
+  .reset {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 200px;
+    margin: 2rem auto;
+    margin-top: 7rem;
+  }
+
+  #box {
+    width: 350px;
+    height: 350px;
+  }
+
+  #box img {
+    width: 330px;
+    height: 330px;
+  }
+  .attribution {
+    font-size: 1.2rem;
+  }
+}

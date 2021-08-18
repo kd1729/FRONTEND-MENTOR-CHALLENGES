@@ -8,6 +8,7 @@ var YouClass, HouseClass;
 var array = ["img-scissors", "img-rock", "img-paper"];
 var score = 0;
 var result = document.getElementById("result");
+var Score = document.getElementById("score");
 
 function myInput(Val) {
 
@@ -23,16 +24,16 @@ function myInput(Val) {
 
     if (Val > idx && (Val !== 2 || idx !== 0) || (Val === 0 && idx === 2) ){
         score++;
-        result.innerText = "You Won 😀";
+        result.innerText = "You Won ! 😀";
     }
     else if (Val == idx) {
-        result.innerText = "Draw 😐";
+        result.innerText = "Draw !!! 😐";
     }
     else{
         score--;
-        result.innerText = "You Lost 😪";
+        result.innerText = "You Lost ! 😪";
     }
-   document.getElementById("score").innerText = score;
+   Score.innerText = score;
 }
 
 
@@ -47,7 +48,7 @@ function playAgain() {
 
 function Reset(){
     score = 0;
-    document.getElementById("score").innerText = score;
+    Score.innerText = score;
     result.innerText = "";
     CHOOSE.style.display = "flex";
     PICKED.style.display = "none";
