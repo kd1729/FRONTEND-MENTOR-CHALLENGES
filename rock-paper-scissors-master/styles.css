@@ -223,7 +223,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     display: block;
     overflow: hidden;
