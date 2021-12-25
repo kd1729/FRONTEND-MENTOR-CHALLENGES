@@ -182,6 +182,7 @@ body {
   font-size: 2rem;
   padding: 20px 40px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 /* Rules Popup */
