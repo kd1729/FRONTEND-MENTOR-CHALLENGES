@@ -1,7 +1,7 @@
 
 var timer = setInterval(function() {
 
-const destination = new Date("2022-01-01T00:00:00");
+const destination = new Date("2023-01-01T00:00:00");
 const current = new Date();
 
 const diff = (destination .getTime() - current.getTime()) / 1000;
@@ -24,8 +24,3 @@ document.getElementById("months").innerText = months;
 }, 1000);
 
 
-// console.log(months);
-// console.log(days);
-// console.log(hours);
-// console.log(minutes);
-// console.log(seconds);
