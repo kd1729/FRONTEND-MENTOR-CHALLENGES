@@ -1,7 +1,7 @@
 
 var timer = setInterval(function() {
 
-const destination = new Date("2024-01-01T00:00:00");
+const destination = new Date("2025-01-01T00:00:00");
 const current = new Date();
 
 const diff = (destination .getTime() - current.getTime()) / 1000;
